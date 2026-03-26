@@ -1,53 +1,109 @@
-# ARDUINO
-Lavoro con Arduino
-------------------------------------------------------------
-- 4 Semafori incrocio con Arduino UNO
-- 2 Semafori con Arduino UNO
-- Luce Accessa con Arduino UNO
-- Bottone per Luce con Arduino UNO
-------------------------------------------------------------
-# 4 SEMAFORI
-Materiali Utilizzati
-- Piccola BreadBoard
-- 4 Led Verdi
-- 4 Led Gialli
-- 4 Led Rossi
-- 12 Resistenze
-- 4 Arduino UNO
+# 🚦 Progetti Arduino
 
-Per creare i 4 semafori ho utilizzato dei codici che svolgono il loro lavoro indipendentemente dai altri semafori
-poiche essi svolgono il loro compito in basse al tempo, cosi che siano sincronizzati perfettamente senza controlli oppurtuni.
-#
+Raccolta di progetti realizzati con **Arduino UNO**, che includono semafori sincronizzati, luci controllate e un sistema con bottone.
 
-# 2 SEMAFORI
-Materiali Utilizzati
-- Piccola BreadBoard
-- 2 Led Verdi
-- 2 Led Gialli
-- 2 Led Rossi
-- 6 Resistenze
-- 2 Arduino UNO
+---
 
-Per creare i 2 semafori ho utilizzato la stessa logica per i 4 semaofri, nulla di troppo complicato.
-#
+## 📋 Indice
 
-# LUCE ACCESSA
-Materiali Utilizzati
-- Piccola BreadBoard
-- 1 Led Blu
-- 1 Resistenze
-- 1 Arduino UNO
-  
-Per creare la luce accessa ho semplicemente scritto il codice dove la luce e' sempre accessa senza nessuna particolarita
-#
+- [4 Semafori a Incrocio](#-4-semafori-a-incrocio)
+- [2 Semafori](#-2-semafori)
+- [Luce Accesa](#-luce-accesa)
+- [Luce con Bottone](#-luce-con-bottone)
 
-# LUCE ACCESSA CON BOTTONE
-Materiali Utilizzati
-- Piccola BreadBoard
-- 1 Led Blu
-- 1 Resistenze
-- 1 Arduino UNO
-- 1 Bottone
-  
-Per creare la luce accessa con bottone ho semplicemente scritto stesso codice di luce accessa solamente che e' presente uno "STATO" 
-che controlla quando il bottone e' accesso o no.
+---
+
+## 🚦 4 Semafori a Incrocio
+
+Simulazione di un incrocio completo con 4 semafori sincronizzati tra loro tramite logica temporale.
+
+### 🧰 Materiali
+
+| Componente       | Quantità |
+|-----------------|----------|
+| Piccola BreadBoard | 4     |
+| LED Verde        | 4        |
+| LED Giallo       | 4        |
+| LED Rosso        | 4        |
+| Resistenze       | 12       |
+| Arduino UNO      | 4        |
+
+### 💡 Logica di Funzionamento
+
+Ogni Arduino esegue il proprio codice in modo **completamente autonomo** e indipendente dagli altri. La sincronizzazione tra i 4 semafori è garantita dalla **gestione precisa dei tempi**, ogni Arduino segue la stessa sequenza temporale, ottenendo così una perfetta coordinazione senza necessità di comunicazione tra le schede.
+
+> **Vantaggio:** nessun cavo di comunicazione tra Arduino.
+
+---
+
+## 🚦 2 Semafori
+
+Versione ridotta del sistema con 4 semafori.
+
+### 🧰 Materiali
+
+| Componente       | Quantità |
+|-----------------|----------|
+| Piccola BreadBoard | 2     |
+| LED Verde        | 2        |
+| LED Giallo       | 2        |
+| LED Rosso        | 2        |
+| Resistenze       | 6        |
+| Arduino UNO      | 2        |
+
+### 💡 Logica di Funzionamento
+
+Stessa logica del progetto a 4 semafori: ogni Arduino gestisce il proprio semaforo in modo autonomo, sincronizzato tramite `delay()`.
+
+---
+
+## 💡 Luce Accesa
+
+Progetto base un LED sempre acceso, senza alcuna complicazione logica.
+
+### 🧰 Materiali
+
+| Componente       | Quantità |
+|-----------------|----------|
+| Piccola BreadBoard | 1     |
+| LED Blu          | 1        |
+| Resistenza       | 1        |
+| Arduino UNO      | 1        |
+
+### 💡 Logica di Funzionamento
+
+Il codice alimenta continuamente il pin del LED.
+
+---
+
+## 🔘 Luce con Bottone
+
+Estensione del progetto precedente: il LED si accende e spegne premendo un bottone.
+
+### 🧰 Materiali
+
+| Componente       | Quantità |
+|-----------------|----------|
+| Piccola BreadBoard | 1     |
+| LED Blu          | 1        |
+| Resistenza       | 1        |
+| Arduino UNO      | 1        |
+| Bottone          | 1        |
+
+### 💡 Logica di Funzionamento
+
+Il sistema mantiene una variabile **`stato`** che tiene traccia dello stato corrente del LED (`ON(HIGH)` / `OFF(LOW)`). Ad ogni pressione del bottone, lo stato viene invertito, e il LED si aggiorna di conseguenza. 
+
+---
+
+## 🛠️ Tecnologie Utilizzate
+
+- [Arduino UNO](https://www.arduino.cc/)
+- Arduino IDE
+- Linguaggio C/C++ per Arduino
+
+---
+
+## 👤 Autore
+
+Grenis Banushi.
